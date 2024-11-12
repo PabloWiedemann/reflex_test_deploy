@@ -6,5 +6,5 @@ config = rx.Config(
     backend_port=10000,
     # api_url="https://myfeedtldr.onrender.com",
     backend_host="0.0.0.0",
-    api_url="https://reflextestdeploy-production.up.railway.app",
+    api_url="https://reflex-test.up.railway.app",
 )
