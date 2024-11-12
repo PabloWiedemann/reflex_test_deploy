@@ -5,4 +5,4 @@ buildCommand = "pip install --no-cache-dir -r requirements.txt"
 PYTHON_VERSION = "3.12.5"
 
 [deploy]
-startCommand = "reflex run --env prod --port $PORT --host 0.0.0.0"
+startCommand = "reflex run --env prod --backend-port $PORT --frontend-port $PORT --backend-host 0.0.0.0"
