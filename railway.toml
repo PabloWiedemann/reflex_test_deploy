@@ -1,8 +1,0 @@
-[build]
-builder = "nixpacks"
-buildCommand = "pip install --no-cache-dir -r requirements.txt"
-[build.env]
-PYTHON_VERSION = "3.12.5"
-
-[deploy]
-startCommand = "reflex run --env prod --backend-port 10000 --frontend-port 10000"
