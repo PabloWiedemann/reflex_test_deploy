@@ -2,17 +2,17 @@
     admin off
 }
 
-:{$PORT} {
-    encode gzip
+:10000
 
-    @backend_routes path /_event/* /ping /_upload /_upload/*
-    handle @backend_routes {
-        reverse_proxy localhost:10000
-    }
+encode gzip
 
-    root * /srv
-    route {
-        try_files {path} {path}/ /404.html
-        file_server
-    }
+@backend_routes path /_event/* /ping /_upload /_upload/*
+handle @backend_routes {
+	reverse_proxy localhost:8000
+}
+
+root * /srv
+route {
+	try_files {path} {path}/ /404.html
+	file_server
 }
