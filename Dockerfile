@@ -38,4 +38,4 @@ EXPOSE $PORT
 CMD [ -d alembic ] && reflex db migrate; \
     caddy start && \
     redis-server --daemonize yes && \
-    exec reflex run --env prod --backend-only
+    exec reflex run --env prod --backend-only --backend-port 10000
